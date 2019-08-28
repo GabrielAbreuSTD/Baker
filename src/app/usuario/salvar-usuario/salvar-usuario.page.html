@@ -5,5 +5,7 @@
 </ion-header>
 
 <ion-content>
-
+<ion-input type="text" name="email" [(ngModel)]="usuario.email"></ion-input>
+<ion-input type="text" name="senha" [(ngModel)]= "usuario.senha"></ion-input>
+<ion-button (click)="salvar()">salvar</ion-button>
 </ion-content>

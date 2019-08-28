@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { Usuario } from './usuario/entidade/usuario';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-salvar-usuario',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SalvarUsuarioPage implements OnInit {
 
-  constructor() { }
+usuario: Usuario = new Usuario();
 
-  ngOnInit() {
+  constructor(
+        private banco: AngularFireDatabase,
+        private rota: Router
+      ) {}
+
+  ngOnInit() {}
+
+  salvar() {
+    this.banco.list('usuario').push(this.usuario);
+    this.usuario = new Usuario();
+    rota.navigate(['contato-listar']);
+    alert("salvo com sucesso amado");
   }
 
 }
