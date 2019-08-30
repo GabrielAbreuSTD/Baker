@@ -10,11 +10,15 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
+import { SalvarUsuarioPage} from './usuario/salvar-usuario/salvar-usuario.page';
+import { UsuarioListarComponent} from './usuario/usuario-listar/usuario-listar.component';
+
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, UsuarioListarComponent, SalvarUsuarioPage],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     FormsModule, AngularFireDatabaseModule, AngularFireModule.initializeApp({

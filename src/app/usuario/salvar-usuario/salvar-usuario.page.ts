@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { Usuario } from './usuario/entidade/usuario';
+import { Usuario } from '../entidade/usuario';
 import { Router } from '@angular/router';
 
 @Component({
@@ -22,7 +22,7 @@ usuario: Usuario = new Usuario();
   salvar() {
     this.banco.list('usuario').push(this.usuario);
     this.usuario = new Usuario();
-    rota.navigate(['contato-listar']);
+    this.rota.navigate(['usuario-listar']);
     alert("salvo com sucesso amado");
   }
 

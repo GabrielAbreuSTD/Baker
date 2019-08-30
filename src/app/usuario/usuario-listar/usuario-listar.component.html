@@ -6,9 +6,10 @@
 
 <ion-content>
  <ion-list>
-  <ion-item *ngFor="let usuario of ListaUsuarios | async">
+  <ion-item *ngFor="let usuario of ListarUsuario | async">
     <ion-label>{{ usuario.email }}</ion-label>
     <ion-label>{{ usuario.senha}}</ion-label>
   </ion-item>
  </ion-list>
+ <ion-button href="salvar-usuario"> back</ion-button>
 </ion-content>
