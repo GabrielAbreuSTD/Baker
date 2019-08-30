@@ -1,6 +1,5 @@
 {
   "name": "Baker",
   "integrations": {},
-  "type": "angular",
-  "app_id": ""
+  "type": "angular"
 }
